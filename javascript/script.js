@@ -3,8 +3,11 @@ function checkISP() {
 
   let ispResult;
   let ispMessage; // New variable for the message
-
-  if (
+  if (phoneNumber === "") {
+    ispResult = "Phone number cannot be Empty.";
+  } else if (!/^\d{10}$/.test(phoneNumber)) {
+    ispResult = "Invalid Phone Number.";
+  } else if (
     phoneNumber.startsWith("071") ||
     phoneNumber.startsWith("065") ||
     phoneNumber.startsWith("067")
