@@ -188,3 +188,7 @@
   text-align: center;
   color: #000;
 }
+
+.hover:hover {
+  background-color: #333;
+}
