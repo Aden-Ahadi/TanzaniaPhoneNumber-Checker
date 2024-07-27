@@ -9,45 +9,71 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
     />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body class="flex justify-center items-center min-h-screen bg-gray-100">
-    <div
-      class="rounded-lg border bg-white text-gray-900 shadow-sm w-full max-w-md p-6"
-    >
-      <div class="flex flex-col space-y-1.5 p-6">
-        <h3 class="whitespace-nowrap tracking-tight text-2xl font-bold">
-          ISP Lookup
-        </h3>
-        <p class="text-sm text-gray-500">
-          Enter a phone number to check the associated ISP.
-        </p>
-      </div>
-      <div class="p-6 space-y-4">
-        <div class="grid gap-2">
-          <label class="text-sm font-medium leading-none" for="phone"
-            >Phone Number</label
-          >
-          <input
-            class="flex h-10 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black w-full"
-            type="tel"
-            id="phone"
-            placeholder="Enter phone number"
-          />
-        </div>
-        <button
-          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black bg-black text-white hover:bg-gray-900 h-10 px-4 py-2 w-full"
-          onclick="checkISP()"
+  <body class="container mid">
+    <nav class="navigation">
+      <div><a href="#" class="brand">LOOK-UP</a></div>
+      <div class="">
+        <a
+          href="https://www.instagram.com/iam_aden?igsh=MXU5bGVyMjZleG9vMQ=="
+          target="_blank"
         >
-          Check ISP
-        </button>
-        <div class="grid gap-2">
-          <label class="text-sm font-medium leading-none">ISP Result</label>
-          <div class="p-4 bg-gray-100 rounded-md" id="isp-result">
-            <!-- Result will be displayed here -->
+          <button class="button">
+            <span>Iam</span>
+          </button>
+        </a>
+      </div>
+    </nav>
+
+    <div class="flex justify-center items-center">
+      <div
+        class="rounded-lg border bg-white text-gray-900 shadow-sm w-full max-w-md p-6 justify-center items-center"
+      >
+        <div class="flex flex-col space-y-1.5 p-6">
+          <h3 class="whitespace-nowrap tracking-tight text-2xl font-bold">
+            Phone Number Lookup
+          </h3>
+          <p class="text-sm text-gray-500">
+            Enter a phone number to check the associated ISP.
+          </p>
+        </div>
+        <div class="p-6 space-y-4">
+          <div class="grid gap-2">
+            <label class="text-sm font-medium leading-none" for="phone"
+              >Phone Number</label
+            >
+            <input
+              class="flex h-10 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black w-full"
+              type="tel"
+              id="phone"
+              placeholder="Enter Tanzanian phone number"
+            />
+          </div>
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black bg-black text-white hover:bg-gray-900 h-10 px-4 py-2 w-full"
+            onclick="checkISP()"
+          >
+            Check Provider
+          </button>
+          <div class="grid gap-2">
+            <label class="text-sm font-medium leading-none"
+              >Service Provider</label
+            >
+            <div class="p-4 bg-gray-100 rounded-md" id="isp-result">
+              <!-- Result will be displayed here -->
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="footer">
+      <p>&copy; 2024 Lookup. All rights reserved.</p>
+    </div>
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
+
     <script src="javascript/script.js"></script>
   </body>
 </html>

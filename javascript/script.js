@@ -33,8 +33,8 @@ function checkISP() {
     ispResult = "Halotel Mobile";
     ispMessage = "The phone number is associated with Halotel Mobile.";
   } else if (phoneNumber.startsWith("073")) {
-    ispResult = "TTCl Mobile";
-    ispMessage = "The phone number is associated with TTCl Mobile.";
+    ispResult = "TTCL Mobile";
+    ispMessage = "The phone number is associated with TTCL Mobile.";
   } else {
     ispResult = "Number is not from Tanzania";
     ispMessage = "The provided number is not from Tanzania.";
@@ -48,3 +48,11 @@ function checkISP() {
   ispMessageElement.textContent = ispMessage;
   ispResultElement.appendChild(ispMessageElement);
 }
+
+//For the Pre Loader
+document.addEventListener("DOMContentLoaded", function () {
+  const loaderWrapper = document.querySelector(".loader-wrapper");
+  setTimeout(function () {
+    loaderWrapper.style.display = "none";
+  }, 4000); // Wait for 4 seconds before hiding
+});
