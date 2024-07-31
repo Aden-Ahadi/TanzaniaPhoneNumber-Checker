@@ -1,3 +1,8 @@
+document.getElementById("phone").addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    checkISP();
+  }
+});
 function checkISP() {
   const phoneNumber = document.getElementById("phone").value;
 
