@@ -7,7 +7,7 @@ function checkISP() {
   const phoneNumber = document.getElementById("phone").value;
 
   let ispResult;
-  let ispMessage; // New variable for the message
+  let ispMessage;
   if (phoneNumber === "") {
     ispResult = "Phone number cannot be Empty.";
   } else if (!/^\d{10}$/.test(phoneNumber)) {
